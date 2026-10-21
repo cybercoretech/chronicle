@@ -11,7 +11,7 @@ use std::process::{Command, ExitCode};
 #[derive(Parser, Debug)]
 #[command(
     name = "chronicle",
-    version = "0.1.0",
+    version,
     about = "Periodic activity digest for a tree of git repos"
 )]
 struct Args {

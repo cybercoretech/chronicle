@@ -93,10 +93,8 @@ pub fn github_base_url(repo: &Path) -> Option<String> {
         rest
     } else if let Some(rest) = url.strip_prefix("https://github.com/") {
         rest
-    } else if let Some(rest) = url.strip_prefix("http://github.com/") {
-        rest
     } else {
-        return None;
+        url.strip_prefix("http://github.com/")?
     };
     let path = path.strip_suffix(".git").unwrap_or(path);
     Some(format!("https://github.com/{path}"))

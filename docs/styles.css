@@ -4,3 +4,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 .wide > *, .heading > * {min-width:0}
+
+/* Phones: let the nav wrap so every link, including MASTER DOCS, stays on screen. */
+@media(max-width:560px){nav{flex-wrap:wrap;justify-content:center;column-gap:16px;row-gap:6px}}
